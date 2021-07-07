@@ -9,4 +9,9 @@ module.exports = class User {
   getFriends() {
     return this.friends;
   }
+
+  amIFriendWith(person) {
+    if(this.friends.length == 0) return false;
+    return this.friends.includes(person.name)
+  }
 }
