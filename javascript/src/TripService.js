@@ -2,8 +2,8 @@
 
 let UserSession = require('./UserSession');
 let TripDAO = require('./TripDAO');
-
 class TripService {
+    
     getTripsByUser(user) {
         let tripList = [];
         let loggedUser = UserSession.getLoggedUser();
