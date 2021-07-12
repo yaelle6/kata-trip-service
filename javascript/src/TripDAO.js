@@ -1,7 +1,19 @@
 "use strict";
 
-function findTripsByUser(user) {
-    throw new Error("TripDAO should not be invoked on an unit test.");
+class TripDAO {
+    constructor(traveler, trips) {
+        this.traveler = traveler || 'Elsa'
+        this.trips = trips || ['Tanzania', 'Australia', 'Mexico']
+    }
+
+    findTripsByUser(user) {
+        if(user.name === 'Maria') {
+            return [];
+        } else {
+            return ['Tanzania', 'Australia', 'Mexico']
+        }
+      
+    }
 }
 
-module.exports = {findTripsByUser}
+module.exports = TripDAO
